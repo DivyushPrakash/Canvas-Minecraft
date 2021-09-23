@@ -63,12 +63,12 @@ window.addEventListener("keydown",drawblocks);
     }
 
     if(pressedkeycode=="71"){
-        setupblocks("G.jpg");
+        setupblocks("G.png");
         console.log("G pressed");
     }
 
     if(pressedkeycode=="68"){
-        setupblocks("D.jpg");
+        setupblocks("D.png");
         console.log("D pressed");
     }
 
@@ -78,7 +78,7 @@ window.addEventListener("keydown",drawblocks);
     }
 
     if(pressedkeycode=="89"){
-        setupblocks("Y.jpg");
+        setupblocks("Y.png");
         console.log("Y pressed");
     }
 
@@ -93,7 +93,7 @@ window.addEventListener("keydown",drawblocks);
     }
 
     if(pressedkeycode=="65"){
-        setupblocks("A.jpg");
+        setupblocks("A.png");
         console.log("A pressed");
     }
 
@@ -101,4 +101,44 @@ window.addEventListener("keydown",drawblocks);
         setupblocks("T.jpg");
         console.log("T pressed");
     }
+ }
+
+ function up(){
+    if(steveYposition>0){
+        steveYposition=steveYposition-10;
+        console.log("X="+steveXposition+",Y="+steveYposition);
+        canvas.remove(steve);
+        setupsteve();
+
+    } 
+ }
+
+ function down(){
+    if(steveYposition<600){
+        steveYposition=steveYposition+10;
+        console.log("X="+steveXposition+",Y="+steveYposition);
+        canvas.remove(steve);
+        setupsteve();
+        
+    } 
+ }
+
+ function left(){
+    if(steveXposition>0){
+        steveXposition=steveXposition-10;
+        console.log("X="+steveXposition+",Y="+steveYposition);
+        canvas.remove(steve);
+        setupsteve();
+        
+    } 
+ }
+
+ function right(){
+    if(steveXposition<780){
+        steveXposition=steveXposition+10;
+        console.log("X="+steveXposition+",Y="+steveYposition);
+        canvas.remove(steve);
+        setupsteve();
+        
+    } 
  }
